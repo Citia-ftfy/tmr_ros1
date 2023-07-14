@@ -144,6 +144,8 @@ add_executable(demo_connect_tm    src/demo_connect_tm.cpp)
 add_executable(demo_set_event     src/demo_set_event.cpp)
 add_executable(demo_set_io        src/demo_set_io.cpp)
 add_executable(demo_set_positions src/demo_set_positions.cpp)
+add_executable(demo_set_gondola src/demo_set_gondola.cpp)
+add_executable(demo_set_home src/demo_set_home.cpp)
 add_executable(demo_write_item    src/demo_write_item.cpp)
 add_executable(demo_ask_item      src/demo_ask_item.cpp)
 add_executable(demo_get_feedback      get_status_demo_src/demo_get_feedback.cpp)
@@ -170,6 +172,8 @@ add_dependencies(demo_connect_tm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 add_dependencies(demo_set_event ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(demo_set_io ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(demo_set_positions ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(demo_set_gondola ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(demo_set_home ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(demo_write_item ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(demo_ask_item ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(demo_get_feedback ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -201,6 +205,12 @@ add_dependencies(demo_get_image_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catki
  target_link_libraries(demo_set_positions
    ${catkin_LIBRARIES}
  ) 
+ target_link_libraries(demo_set_gondola
+   ${catkin_LIBRARIES}
+ ) 
+ target_link_libraries(demo_set_home
+   ${catkin_LIBRARIES}
+ )
  target_link_libraries(demo_write_item
    ${catkin_LIBRARIES}
  ) 
